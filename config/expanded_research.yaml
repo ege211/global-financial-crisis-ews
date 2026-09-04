@@ -3,7 +3,9 @@ run_namespace: expanded_research
 start_year: 1990
 end_year: 2025
 variables: [gdp_growth, inflation, reserves_usd]
-features: [gdp_growth, inflation, reserves_usd_yoy_pct_change]
+features: [gdp_growth, inflation, reserves_usd, reserves_usd_yoy_pct_change]
 model_overrides:
   minimum_train_years: 10
   test_start_year: 2000
+  test_end_year: 2008
+  threshold: 0.50

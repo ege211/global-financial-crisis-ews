@@ -1,0 +1,11 @@
+model,probability_bin,observations,crises,mean_predicted_probability,empirical_crisis_rate,calibration_error
+logistic_regression,"[0.0, 0.05)",0,0,0.0,0.0,0.0
+logistic_regression,"[0.05, 0.10)",0,0,0.0,0.0,0.0
+logistic_regression,"[0.10, 0.20)",0,0,0.0,0.0,0.0
+logistic_regression,"[0.20, 0.50)",472,15,0.4701,0.0318,0.4383
+logistic_regression,"[0.50, 1.00]",212,4,0.5534,0.0189,0.5346
+random_forest,"[0.0, 0.05)",128,1,0.0254,0.0078,0.0176
+random_forest,"[0.05, 0.10)",116,6,0.0699,0.0517,0.0182
+random_forest,"[0.10, 0.20)",91,5,0.1462,0.0549,0.0913
+random_forest,"[0.20, 0.50)",184,3,0.366,0.0163,0.3497
+random_forest,"[0.50, 1.00]",165,4,0.6269,0.0242,0.6027

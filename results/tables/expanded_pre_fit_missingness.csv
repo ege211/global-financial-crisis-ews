@@ -1,0 +1,5 @@
+variable,total_rows,missing_count,missing_percent,years_with_missing,status
+gdp_growth,2736,0,0.0,[],passed
+inflation,2736,0,0.0,[],passed
+reserves_usd,2736,0,0.0,[],passed
+reserves_usd_yoy_pct_change,2736,76,2.7778,[1990],passed

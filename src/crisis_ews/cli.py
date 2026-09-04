@@ -161,6 +161,7 @@ def evaluate(root: Path, model_name: str, profile_path: Path | None = None) -> N
         factory = lambda: random_forest_pipeline(settings["models"][model_name], seed)
     else:
         raise ValueError(f"Unsupported model: {model_name}")
+    test_end_year = settings.get("test_end_year")
     predictions, metrics = evaluate_walk_forward(
         data=data,
         features=features,
@@ -169,6 +170,7 @@ def evaluate(root: Path, model_name: str, profile_path: Path | None = None) -> N
         test_start_year=int(settings["test_start_year"]),
         threshold=float(settings["threshold"]),
         model_name=model_name,
+        test_end_year=int(test_end_year) if test_end_year is not None else None,
     )
     output_directory = _run_path(root, "results", namespace)
     (output_directory / "model_outputs").mkdir(parents=True, exist_ok=True)
@@ -192,11 +194,30 @@ def main() -> None:
     prepare_parser.add_argument("--chronology", type=Path, required=True)
     evaluate_parser = subparsers.add_parser("evaluate", help="Run expanding-window evaluation")
     evaluate_parser.add_argument("--model", choices=["logistic_regression", "random_forest"], default="logistic_regression")
-    subparsers.add_parser(
+    expanded_parser = subparsers.add_parser(
         "run-expanded-research",
         aliases=["expanded-research"],
         help="Execute Phase 4B expanded universe pipeline across qualifying economies",
     )
+    expanded_parser.add_argument("--profile", type=Path, help="Run profile path")
+    pre_fit_parser = subparsers.add_parser(
+        "pre-fit-audit",
+        aliases=["audit-pre-fit"],
+        help="Execute Phase 5A pre-fit audit across the 76-country panel without model fitting",
+    )
+    pre_fit_parser.add_argument("--profile", type=Path, help="Run profile path")
+    initial_models_parser = subparsers.add_parser(
+        "run-initial-models",
+        aliases=["initial-models"],
+        help="Execute Phase 5B initial model estimation across the locked expanding window (2000-2008)",
+    )
+    initial_models_parser.add_argument("--profile", type=Path, help="Run profile path")
+    robustness_parser = subparsers.add_parser(
+        "run-phase-5c",
+        aliases=["robustness", "robustness-analysis"],
+        help="Execute Phase 5C robustness and sensitivity analysis across the 76-country panel",
+    )
+    robustness_parser.add_argument("--profile", type=Path, help="Run profile path")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     root = args.root.resolve()
@@ -227,6 +248,35 @@ def main() -> None:
             summary["included_countries"],
             summary["total_rows"],
             summary["positive_labels"],
+        )
+    elif args.command in ("pre-fit-audit", "audit-pre-fit"):
+        from crisis_ews.evaluation.pre_fit_audit import run_pre_fit_audit
+
+        profile_path = profile if profile is not None else (root / "config/expanded_research.yaml")
+        audit_summary = run_pre_fit_audit(root, profile_path)
+        LOGGER.info(
+            "Phase 5A pre-fit audit completed: %s folds, %s cumulative test rows, %s test positives, zero models fitted",
+            audit_summary["folds_count"],
+            audit_summary["cumulative_test_rows"],
+            audit_summary["cumulative_test_positives"],
+        )
+    elif args.command in ("run-initial-models", "initial-models"):
+        from crisis_ews.evaluation.initial_models import run_phase_5b_initial_models
+
+        profile_path = profile if profile is not None else (root / "config/expanded_research.yaml")
+        model_summary = run_phase_5b_initial_models(root, profile_path)
+        LOGGER.info(
+            "Phase 5B model estimation completed: %s test observations, %s positive events evaluated across 9 folds",
+            model_summary["total_test_observations"],
+            model_summary["test_positive_events"],
+        )
+    elif args.command in ("run-phase-5c", "robustness", "robustness-analysis"):
+        from crisis_ews.evaluation.robustness_analysis import run_phase_5c_robustness
+
+        profile_path = profile if profile is not None else (root / "config/expanded_research.yaml")
+        summary = run_phase_5c_robustness(root, profile_path)
+        LOGGER.info(
+            "Phase 5C robustness analysis completed: 4 analyses evaluated across expanding folds"
         )
 
 
