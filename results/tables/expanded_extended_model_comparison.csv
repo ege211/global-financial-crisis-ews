@@ -1,0 +1,5 @@
+model,specification,pr_auc,roc_auc,precision,recall,f1,brier_score,true_positives,false_positives,false_negatives,true_negatives,observations,positive_events
+logistic_regression,4-var flow baseline,0.0278,0.5106,0.0189,0.2105,0.0346,0.2512,4,208,15,457,684,19
+random_forest,4-var flow baseline,0.0256,0.4712,0.0242,0.2105,0.0435,0.1524,4,161,15,504,684,19
+extended_logistic_regression,"6-var (+credit, +ca)",0.0344,0.5734,0.0459,0.4737,0.0837,0.2482,9,187,10,478,684,19
+extended_random_forest,"6-var (+credit, +ca)",0.0274,0.4715,0.0161,0.1053,0.028,0.1347,2,122,17,543,684,19

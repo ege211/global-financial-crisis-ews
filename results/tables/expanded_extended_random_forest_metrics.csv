@@ -1,0 +1,2 @@
+observations,crises,roc_auc,pr_auc,precision,recall,f1,brier_score,true_negatives,false_positives,false_negatives,true_positives,false_negative_rate,model,feature_version,threshold,negative_observations
+684,19,0.4715472892758211,0.02743153022358161,0.016129032258064516,0.10526315789473684,0.027972027972027972,0.13468408137930227,543,122,17,2,0.8947368421052632,extended_random_forest,extended-6var-v1,0.5,665

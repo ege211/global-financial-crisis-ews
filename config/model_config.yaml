@@ -14,6 +14,13 @@ feature_sets:
     - current_account_pct_gdp
     - real_interest_rate
     - official_exchange_rate_yoy_pct_change
+  extended_6var:
+    - gdp_growth
+    - inflation
+    - reserves_usd
+    - reserves_usd_yoy_pct_change
+    - private_credit_pct_gdp
+    - current_account_pct_gdp
 models:
   logistic_regression:
     C: 1.0

@@ -1,0 +1,3 @@
+model,observations,crises,unconditional_rate,brier_score,brier_skill_score
+extended_logistic_regression,684,19,0.0278,0.2482,-8.1914
+extended_random_forest,684,19,0.0278,0.1347,-3.9872

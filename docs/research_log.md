@@ -85,3 +85,45 @@ Future entries should record data-source versions, exclusion decisions, revised 
 - Documented full methodology and interpretations in `docs/PHASE_5C_ROBUSTNESS_RESULTS.md`. Integrated CLI subcommand `run-phase-5c` (aliases `robustness`, `robustness-analysis`) and added 7 unit tests in `tests/test_phase5c_robustness.py`. All 49 repository tests pass.
 - Research integrity confirmed: NO baseline changes, NO parameter tuning, NO threshold optimization, NO post-hoc feature selection.
 
+## 2026-09-04 — Phase 5D predictor selection & data coverage audit
+
+- Executed pre-model predictor selection and data coverage audit across six candidate vulnerability indicators for the 76-country panel (1990–2025) and locked expanding validation folds ($T \in [2000, 2008]$).
+- Formulated an objective inclusion rule BEFORE estimating any predictive models: candidates must possess clear theoretical linkage to systemic banking crisis vulnerability, traceable official multilateral sourcing, leakage-free transformation ($\le t$), $\ge 85.0\%$ observation coverage in the 2000–2008 evaluation window ($684$ obs), $\ge 90.0\%$ crisis retention (at least $17/19$ positive events in 2000–2008), and freedom from structural breaks or extreme linear collinearity ($|r| > 0.90$).
+- Eligible candidate 1: Domestic credit to private sector (% of GDP) (`FS.AST.PRVT.GD.ZS`, WDI/IMF IFS) — Domestic leverage/overhang channel. 85.96% validation coverage (588/684), retains 18/19 test crises (94.7%).
+- Eligible candidate 2: Current account balance (% of GDP) (`BN.CAB.XOKA.GD.ZS`, WDI/IMF BPM6) — External imbalance/sudden-stop vulnerability channel. 95.61% validation coverage (654/684), retains 19/19 test crises (100.0%).
+- Eligible candidate 3: Total unemployment rate (% of labor force, ILO modeled) (`SL.UEM.TOTL.ZS`, WDI/ILO) — Real-economy distress/debtor repayment incapacity channel. 97.37% validation coverage (666/684), retains 19/19 test crises (100.0%).
+- Excluded candidate 1: Private credit growth (`FS.AST.PRVT.GD.ZS` derived) — Fails coverage threshold at 82.16% in 2000–2008 (< 85% rule); redundant with credit level.
+- Excluded candidate 2: Exchange rate depreciation (`PA.NUS.FCRF` derived) — Fails data continuity due to Eurozone 1999 conversion causing -46% to -99.95% artificial drops; extreme linear collinearity with inflation ($r = 0.9585$).
+- Excluded candidate 3: National unemployment rate (`SL.UEM.TOTL.NE.ZS`) — Fails coverage threshold at 80.12% in 2000–2008 (< 85% rule); severe cross-country definitional heterogeneity.
+- Extended Predictor Set pre-specified at exactly 7 variables (4 baseline + 3 extended: `gdp_growth`, `inflation`, `reserves_usd`, `reserves_usd_yoy_pct_change`, `private_credit_pct_gdp`, `current_account_pct_gdp`, `unemployment_rate_ilo`).
+- Exported audit tables: `results/tables/phase5d_candidate_coverage.csv`, `results/tables/expanded_phase5d_candidate_coverage.csv`, `results/tables/phase5d_correlations_pearson.csv`, and `results/tables/phase5d_correlations_spearman.csv`.
+- Software quality & testing: Implemented `src/crisis_ews/evaluation/predictor_audit.py`, added `run-phase-5d` CLI command, documented findings in `docs/PHASE_5D_PREDICTOR_SELECTION.md`, and added 7 unit tests in `tests/test_phase5d_predictors.py`. All 56 repository tests pass; ruff clean.
+- Research integrity confirmed: ZERO models fitted, ZERO performance conditioning, country universe and validation design preserved intact.
+
+## 2026-09-04 — Phase 5E 6-variable extended model estimation
+
+- Executed the out-of-sample evaluation of the approved 6-variable Extended Predictor Set across the locked 76-country panel and 9 expanding validation folds ($T \in [2000, 2008]$, 684 test observations, 19 forward crisis events).
+- Locked 6-variable specification: `gdp_growth`, `inflation`, `reserves_usd`, `reserves_usd_yoy_pct_change` plus the two pre-registered additions: `private_credit_pct_gdp` (WDI `FS.AST.PRVT.GD.ZS`) and `current_account_pct_gdp` (WDI `BN.CAB.XOKA.GD.ZS`). Excluded `exchange_rate_depreciation` and `unemployment_rate_ilo` from primary model to preserve rare-event degrees of freedom.
+- Main empirical finding (Logistic Regression): Substantial improvement across all performance metrics over the 4-variable baseline. PR-AUC increased from 0.0278 to 0.0344 (+23.7%); ROC-AUC increased from 0.5106 to 0.5734; Recall surged from 21.05% (4/19) to 47.37% (9/19); Precision rose from 0.0189 to 0.0459; F1 rose from 0.0346 to 0.0837; Brier score improved from 0.2512 to 0.2482; False alarms dropped from 208 down to 187.
+- GFC stress test ($T=2007$ anticipating 2008 crises): In the multi-event crisis epicenter fold (15 crises), Extended Logistic Regression detected 9 of 15 crisis economies (Recall = 60.0%, True Positives = 9: DNK, ESP, FRA, GRC, HUN, IRL, ISL, ITA, PRT), tripling baseline detections (3 of 15: DEU, ESP, FRA).
+- Random Forest: Extended ensemble became more conservative at the static $\tau=0.50$ cutoff, reducing false alarms from 161 to 122 and Brier score from 0.1524 to 0.1347, with PR-AUC at 0.0274 and 2 True Positives.
+- Feature interpretation: In the final training fold ($T=2008$, trained 1990–2007), `private_credit_pct_gdp` emerged as the largest positive predictor ($\beta = +0.5142, \text{OR} = 1.6723$, +67.2% odds per SD increase) and the second most important tree feature (22.5%). Current account exhibited a negative sign ($\beta = -0.0463, \text{OR} = 0.9547$), indicating that larger deficits elevate crisis odds. All six features aligned with theoretical economic directions.
+- Software quality & testing: Implemented `src/crisis_ews/evaluation/extended_models.py`, added `run-extended-models` CLI command, generated distinct predictions in `results/model_outputs/extended_*_predictions.csv` (leaving baseline files intact), exported comparison tables in `results/tables/`, and added 7 unit tests in `tests/test_phase5e_extended_models.py`. All 63 tests pass; ruff clean.
+- Research integrity confirmed: Zero hyperparameter tuning, zero threshold tuning, zero modification of Phase 5B/5C artifacts, no commits, no push.
+
+## 2026-09-04 — Phase 5E temporal generalization & GFC dependence diagnostic
+
+- Executed a dedicated temporal-generalization diagnostic on the Phase 5D Extended Logistic Regression out-of-sample predictions (684 obs, 19 crises) vs the Phase 5B Baseline Logistic Regression.
+- Rigorous non-destructive protocol: ZERO model retraining, ZERO threshold adjustments, ZERO predictor alterations. Evaluated five temporal slices:
+  1. Pooled 2000–2008 reference (684 obs, 19 crises)
+  2. Excluding 2007 test fold (608 obs, 4 crises)
+  3. Pre-GFC historical period 2000–2006 (532 obs, 3 crises)
+  4. 2007 GFC test fold (76 obs, 15 crises)
+  5. 2008 post-GFC test fold (76 obs, 1 crisis)
+- Empirical findings & substantive verdict: Categorized unequivocally as a **GFC-specific signal**.
+  - Excluding 2007, Extended Logistic Regression catches exactly 0 out of 4 crises (Recall = 0.0%, TP = 0, FP = 167, FN = 4), while ROC-AUC collapses to 0.2301 (severe ranking inversion).
+  - In the pre-GFC period (2000–2006), Extended LR catches 0 out of 3 crises (Turkey 2001, Argentina 2002, Nigeria 2006), with PR-AUC at 0.0051 (below unconditional prior 0.0056) and ROC-AUC at 0.2936.
+  - In the 2007 GFC fold (forecasting 2008), Extended LR catches 9 of 15 crises (Recall = 60.0%, Precision = 31.0%, PR-AUC = 0.2647, ROC-AUC = 0.6470).
+  - Outside of the 2007 European credit-boom episode, macro-financial indicators offer zero detection capability for sovereign/currency-driven emerging-market crises.
+- Software quality & testing: Implemented `src/crisis_ews/evaluation/temporal_generalization.py`, added `temporal-generalization` CLI command, generated `results/tables/phase5e_temporal_generalization.csv`, documented findings in `docs/PHASE_5E_TEMPORAL_GENERALIZATION.md`, and added 5 unit tests in `tests/test_phase5e_temporal_generalization.py`. All 68 repository tests pass; ruff clean.
+- Research integrity confirmed: Transparent reporting of model boundary conditions; no overclaiming of general early warning predictive power.

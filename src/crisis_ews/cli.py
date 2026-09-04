@@ -218,6 +218,24 @@ def main() -> None:
         help="Execute Phase 5C robustness and sensitivity analysis across the 76-country panel",
     )
     robustness_parser.add_argument("--profile", type=Path, help="Run profile path")
+    predictor_audit_parser = subparsers.add_parser(
+        "run-phase-5d",
+        aliases=["predictor-audit", "audit-predictors"],
+        help="Execute Phase 5D predictor selection and data coverage audit across candidate indicators",
+    )
+    predictor_audit_parser.add_argument("--profile", type=Path, help="Run profile path")
+    extended_models_parser = subparsers.add_parser(
+        "run-extended-models",
+        aliases=["extended-models", "run-phase-5e"],
+        help="Execute Phase 5E 6-variable Extended Model estimation across the locked expanding window",
+    )
+    extended_models_parser.add_argument("--profile", type=Path, help="Run profile path")
+    generalization_parser = subparsers.add_parser(
+        "temporal-generalization",
+        aliases=["run-temporal-generalization", "run-phase-5e-generalization"],
+        help="Execute Phase 5E temporal generalization and GFC dependence analysis",
+    )
+    generalization_parser.add_argument("--threshold", type=float, default=0.50, help="Classification decision threshold")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     root = args.root.resolve()
@@ -277,6 +295,37 @@ def main() -> None:
         summary = run_phase_5c_robustness(root, profile_path)
         LOGGER.info(
             "Phase 5C robustness analysis completed: 4 analyses evaluated across expanding folds"
+        )
+    elif args.command in ("run-phase-5d", "predictor-audit", "audit-predictors"):
+        from crisis_ews.evaluation.predictor_audit import run_phase_5d_predictor_audit
+
+        profile_path = profile if profile is not None else (root / "config/expanded_research.yaml")
+        summary = run_phase_5d_predictor_audit(root, profile_path=profile_path)
+        LOGGER.info(
+            "Phase 5D predictor audit completed: %s candidates audited, %s eligible: %s",
+            summary["candidate_count"],
+            len(summary["eligible_candidates"]),
+            summary["eligible_candidates"],
+        )
+    elif args.command in ("run-extended-models", "extended-models", "run-phase-5e"):
+        from crisis_ews.evaluation.extended_models import run_phase_5e_extended_models
+
+        profile_path = profile if profile is not None else (root / "config/expanded_research.yaml")
+        summary = run_phase_5e_extended_models(root, profile_path=profile_path)
+        LOGGER.info(
+            "Phase 5E Extended Model estimation completed across %s test observations (%s events)",
+            summary["total_test_observations"],
+            summary["test_positive_events"],
+        )
+    elif args.command in ("temporal-generalization", "run-temporal-generalization", "run-phase-5e-generalization"):
+        from crisis_ews.evaluation.temporal_generalization import (
+            run_phase_5e_temporal_generalization,
+        )
+
+        df = run_phase_5e_temporal_generalization(root, threshold=args.threshold)
+        LOGGER.info(
+            "Phase 5E Temporal Generalization analysis completed across %s evaluation subsets",
+            len(df["subset_key"].unique()),
         )
 
 

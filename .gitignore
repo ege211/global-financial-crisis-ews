@@ -19,6 +19,8 @@ results/*
 !results/tables/
 results/tables/*
 !results/tables/expanded_*.csv
+!results/tables/phase5d_*.csv
+!results/tables/phase5e_*.csv
 *.ipynb_checkpoints
 
 .DS_Store
