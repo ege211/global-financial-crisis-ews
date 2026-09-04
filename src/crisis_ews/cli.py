@@ -3,10 +3,10 @@
 from __future__ import annotations
 
 import argparse
-from copy import deepcopy
-from dataclasses import asdict
 import json
 import logging
+from copy import deepcopy
+from dataclasses import asdict
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -192,6 +192,11 @@ def main() -> None:
     prepare_parser.add_argument("--chronology", type=Path, required=True)
     evaluate_parser = subparsers.add_parser("evaluate", help="Run expanding-window evaluation")
     evaluate_parser.add_argument("--model", choices=["logistic_regression", "random_forest"], default="logistic_regression")
+    subparsers.add_parser(
+        "run-expanded-research",
+        aliases=["expanded-research"],
+        help="Execute Phase 4B expanded universe pipeline across qualifying economies",
+    )
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     root = args.root.resolve()
@@ -210,6 +215,19 @@ def main() -> None:
         import_imf_2026_chronology(root, args.dataset_zip, profile)
     elif args.command == "evaluate":
         evaluate(root, args.model, profile)
+    elif args.command in ("run-expanded-research", "expanded-research"):
+        from crisis_ews.data.expanded_pipeline import run_phase_4b_pipeline
+
+        profile_path = profile if profile is not None else (root / "config/expanded_research.yaml")
+        summary = run_phase_4b_pipeline(root, profile_path)
+        LOGGER.info(
+            "Phase 4B expanded research completed: %s candidate economies, %s included, "
+            "%s country-year rows, %s positive forward labels",
+            summary["candidate_countries"],
+            summary["included_countries"],
+            summary["total_rows"],
+            summary["positive_labels"],
+        )
 
 
 if __name__ == "__main__":

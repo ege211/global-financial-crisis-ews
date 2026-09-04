@@ -1,0 +1,5 @@
+variable,total_cells,missing_cells,missingness_percent
+gdp_growth,2736,0,0.0
+inflation,2736,0,0.0
+reserves_usd,2736,0,0.0
+reserves_usd_yoy_pct_change,2736,76,2.78

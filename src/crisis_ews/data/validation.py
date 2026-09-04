@@ -71,6 +71,12 @@ def country_coverage_report(
     for country in countries:
         observed = long_data.loc[long_data["country_code"].eq(country)]
         country_panel = panel.loc[panel["country_code"].eq(country)]
+        has_all_vars = set(variables).issubset(country_panel.columns)
+        complete_cases = (
+            int(country_panel[variables].notna().all(axis=1).sum())
+            if has_all_vars and not country_panel.empty
+            else 0
+        )
         rows.append(
             {
                 "country_code": country,
@@ -78,7 +84,7 @@ def country_coverage_report(
                 "first_available_year": observed["year"].min() if not observed.empty else None,
                 "last_available_year": observed["year"].max() if not observed.empty else None,
                 "country_year_observations": int(country_panel.shape[0]),
-                "complete_case_country_years": int(country_panel[variables].notna().all(axis=1).sum()),
+                "complete_case_country_years": complete_cases,
                 "crisis_observations": int(country_panel.get("crisis_within_horizon", pd.Series(dtype=int)).sum()),
                 "observed_variable_year_cells": int(observed.shape[0]),
                 "expected_variable_year_cells": expected_cells,

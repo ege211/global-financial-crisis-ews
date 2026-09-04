@@ -1,0 +1,6 @@
+metric,value,status
+observations,8208,passed
+duplicate_rows,0,passed
+invalid_country_codes,0,passed
+invalid_years,0,passed
+impossible_values,0,passed

@@ -1,0 +1,218 @@
+country_code,country,region,income_group,first_available_year,last_available_year,country_year_rows,gdp_growth_observations,inflation_observations,reserves_observations,complete_input_rows,input_missingness_percent,included_primary,coverage_decision,crisis_episodes
+ABW,Aruba,Latin America & Caribbean ,High income,1990,2025,36,35,30,36,30,6.48,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation",0
+AFG,Afghanistan,"Middle East, North Africa, Afghanistan & Pakistan",Low income,1990,2025,36,24,20,15,15,45.37,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+AGO,Angola,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,35,31,31,5.56,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+ALB,Albania,Europe & Central Asia,Upper middle income,1990,2025,36,36,34,33,33,4.63,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+AND,Andorra,Europe & Central Asia,High income,1990,2025,36,36,0,0,0,66.67,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+ARE,United Arab Emirates,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,35,18,36,18,17.59,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation",0
+ARG,Argentina,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,7,36,7,26.85,False,excluded_primary_incomplete_core_coverage: inflation,4
+ARM,Armenia,Europe & Central Asia,Upper middle income,1990,2025,36,35,32,34,32,6.48,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+ASM,American Samoa,East Asia & Pacific,High income,1990,2025,36,20,0,0,0,81.48,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+ATG,Antigua and Barbuda,Latin America & Caribbean ,High income,1990,2025,36,36,27,36,27,8.33,False,excluded_primary_incomplete_core_coverage: inflation,0
+AUS,Australia,East Asia & Pacific,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+AUT,Austria,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+AZE,Azerbaijan,Europe & Central Asia,Upper middle income,1990,2025,36,35,34,33,33,5.56,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",2
+BDI,Burundi,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,34,34,1.85,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+BEL,Belgium,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+BEN,Benin,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,33,0,0,36.11,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+BFA,Burkina Faso,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+BGD,Bangladesh,South Asia,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+BGR,Bulgaria,Europe & Central Asia,High income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+BHR,Bahrain,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+BHS,"Bahamas, The",Latin America & Caribbean ,High income,1990,2025,36,35,35,35,35,2.78,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,1990,2025,36,35,18,28,18,25.0,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+BLR,Belarus,Europe & Central Asia,Upper middle income,1990,2025,36,35,33,32,32,7.41,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+BLZ,Belize,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+BMU,Bermuda,North America,High income,1990,2025,36,35,0,0,0,67.59,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+BOL,Bolivia,Latin America & Caribbean ,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+BRA,Brazil,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+BRB,Barbados,Latin America & Caribbean ,High income,1990,2025,36,36,33,35,33,3.7,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+BRN,Brunei Darussalam,East Asia & Pacific,High income,1990,2025,36,36,36,27,27,8.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+BTN,Bhutan,South Asia,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+BWA,Botswana,Sub-Saharan Africa ,Upper middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+CAF,Central African Republic,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,2
+CAN,Canada,North America,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+CHE,Switzerland,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+CHI,Channel Islands,Europe & Central Asia,High income,1990,2025,36,14,0,0,0,87.04,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+CHL,Chile,Latin America & Caribbean ,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+CHN,China,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+CIV,Cote d'Ivoire,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+CMR,Cameroon,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,2
+COD,"Congo, Dem. Rep.",Sub-Saharan Africa ,Low income,1990,2025,36,36,27,34,27,10.19,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",3
+COG,"Congo, Rep.",Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,34,35,34,2.78,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",2
+COL,Colombia,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+COM,Comoros,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,25,36,25,10.19,False,excluded_primary_incomplete_core_coverage: inflation,0
+CPV,Cabo Verde,Sub-Saharan Africa ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+CRI,Costa Rica,Latin America & Caribbean ,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+CUB,Cuba,Latin America & Caribbean ,Upper middle income,1990,2025,36,35,0,0,0,67.59,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+CUW,Curacao,Latin America & Caribbean ,High income,1990,2025,36,24,19,0,0,60.19,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+CYM,Cayman Islands,Latin America & Caribbean ,High income,1990,2025,36,18,7,7,7,70.37,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+CYP,Cyprus,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+CZE,Czechia,Europe & Central Asia,High income,1990,2025,36,35,34,33,33,5.56,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+DEU,Germany,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+DJI,Djibouti,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,1990,2025,36,12,25,36,12,32.41,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation",1
+DMA,Dominica,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+DNK,Denmark,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+DOM,Dominican Republic,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+DZA,Algeria,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+ECU,Ecuador,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+EGY,"Egypt, Arab Rep.","Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+ERI,Eritrea,Sub-Saharan Africa ,Low income,1990,2025,36,19,0,25,0,59.26,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+ESP,Spain,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+EST,Estonia,Europe & Central Asia,High income,1990,2025,36,35,33,34,33,5.56,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+ETH,Ethiopia,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+FIN,Finland,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+FJI,Fiji,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+FRA,France,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+FRO,Faroe Islands,Europe & Central Asia,High income,1990,2025,36,16,0,0,0,85.19,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+FSM,"Micronesia, Fed. Sts.",East Asia & Pacific,Upper middle income,1990,2025,36,36,23,27,23,20.37,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+GAB,Gabon,Sub-Saharan Africa ,Upper middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+GBR,United Kingdom,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+GEO,Georgia,Europe & Central Asia,Upper middle income,1990,2025,36,36,31,31,31,9.26,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+GHA,Ghana,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,2
+GIB,Gibraltar,Europe & Central Asia,High income,1990,2025,36,0,0,0,0,100.0,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+GIN,Guinea,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,21,34,21,15.74,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",2
+GMB,"Gambia, The",Sub-Saharan Africa ,Low income,1990,2025,36,36,35,35,35,1.85,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+GNB,Guinea-Bissau,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,2
+GNQ,Equatorial Guinea,Sub-Saharan Africa ,Upper middle income,1990,2025,36,36,35,35,35,1.85,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",2
+GRC,Greece,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+GRD,Grenada,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+GRL,Greenland,Europe & Central Asia,High income,1990,2025,36,34,0,0,0,68.52,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+GTM,Guatemala,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+GUM,Guam,East Asia & Pacific,High income,1990,2025,36,20,0,0,0,81.48,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+GUY,Guyana,Latin America & Caribbean ,High income,1990,2025,36,36,31,36,31,4.63,False,excluded_primary_incomplete_core_coverage: inflation,1
+HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,1990,2025,36,36,36,33,33,2.78,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+HND,Honduras,Latin America & Caribbean ,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+HRV,Croatia,Europe & Central Asia,High income,1990,2025,36,35,36,34,34,2.78,False,"excluded_primary_incomplete_core_coverage: gdp_growth,reserves_usd",1
+HTI,Haiti,Latin America & Caribbean ,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+HUN,Hungary,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+IDN,Indonesia,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+IMN,Isle of Man,Europe & Central Asia,High income,1990,2025,36,34,0,0,0,68.52,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+IND,India,South Asia,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+IRL,Ireland,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+IRN,"Iran, Islamic Rep.","Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+IRQ,Iraq,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,1990,2025,36,36,35,35,35,1.85,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+ISL,Iceland,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+ISR,Israel,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+ITA,Italy,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+JAM,Jamaica,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+JOR,Jordan,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+JPN,Japan,East Asia & Pacific,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,1990,2025,36,35,32,33,32,7.41,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",2
+KEN,Kenya,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,1990,2025,36,36,30,32,30,9.26,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+KHM,Cambodia,East Asia & Pacific,Lower middle income,1990,2025,36,36,31,33,31,7.41,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+KIR,Kiribati,East Asia & Pacific,Lower middle income,1990,2025,36,36,18,0,0,50.0,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+KNA,St. Kitts and Nevis,Latin America & Caribbean ,High income,1990,2025,36,36,34,36,34,1.85,False,excluded_primary_incomplete_core_coverage: inflation,0
+KOR,"Korea, Rep.",East Asia & Pacific,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+KWT,Kuwait,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+LAO,Lao PDR,East Asia & Pacific,Lower middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+LBN,Lebanon,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,1990,2025,36,35,17,35,17,19.44,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",2
+LBR,Liberia,Sub-Saharan Africa ,Low income,1990,2025,36,36,24,35,24,12.04,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+LBY,Libya,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+LCA,St. Lucia,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+LIE,Liechtenstein,Europe & Central Asia,High income,1990,2025,36,20,0,0,0,81.48,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+LKA,Sri Lanka,South Asia,Upper middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+LSO,Lesotho,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,33,35,33,3.7,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+LTU,Lithuania,Europe & Central Asia,High income,1990,2025,36,35,34,34,34,4.63,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+LUX,Luxembourg,Europe & Central Asia,High income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+LVA,Latvia,Europe & Central Asia,High income,1990,2025,36,35,34,33,33,5.56,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",2
+MAC,"Macao SAR, China",East Asia & Pacific,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+MAF,St. Martin (French part),Latin America & Caribbean ,High income,1990,2025,36,7,0,0,0,93.52,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+MAR,Morocco,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+MCO,Monaco,Europe & Central Asia,High income,1990,2025,36,35,0,0,0,67.59,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+MDA,Moldova,Europe & Central Asia,Upper middle income,1990,2025,36,35,34,34,34,4.63,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+MDG,Madagascar,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+MDV,Maldives,South Asia,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+MEX,Mexico,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+MHL,Marshall Islands,East Asia & Pacific,Upper middle income,1990,2025,36,36,0,0,0,66.67,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+MKD,North Macedonia,Europe & Central Asia,Upper middle income,1990,2025,36,35,32,33,32,7.41,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+MLI,Mali,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+MLT,Malta,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+MMR,Myanmar,East Asia & Pacific,Lower middle income,1990,2025,36,36,30,34,30,7.41,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+MNE,Montenegro,Europe & Central Asia,Upper middle income,1990,2025,36,28,20,19,19,37.96,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+MNG,Mongolia,East Asia & Pacific,Upper middle income,1990,2025,36,36,33,34,33,4.63,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+MNP,Northern Mariana Islands,East Asia & Pacific,High income,1990,2025,36,20,0,0,0,81.48,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+MOZ,Mozambique,Sub-Saharan Africa ,Low income,1990,2025,36,36,21,35,21,14.81,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+MRT,Mauritania,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,32,32,3.7,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+MUS,Mauritius,Sub-Saharan Africa ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+MWI,Malawi,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,31,31,4.63,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+MYS,Malaysia,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+NAM,Namibia,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,23,34,23,13.89,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+NCL,New Caledonia,East Asia & Pacific,High income,1990,2025,36,18,6,0,0,77.78,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+NER,Niger,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+NGA,Nigeria,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+NIC,Nicaragua,Latin America & Caribbean ,Lower middle income,1990,2025,36,36,26,36,26,9.26,False,excluded_primary_incomplete_core_coverage: inflation,2
+NLD,Netherlands,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+NOR,Norway,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+NPL,Nepal,South Asia,Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+NRU,Naoero,East Asia & Pacific,High income,1990,2025,36,36,2,0,0,64.81,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+NZL,New Zealand,East Asia & Pacific,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+OMN,Oman,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,36,25,35,25,11.11,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+PAK,Pakistan,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+PAN,Panama,Latin America & Caribbean ,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+PER,Peru,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+PHL,Philippines,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+PLW,Palau,East Asia & Pacific,High income,1990,2025,36,36,24,0,0,44.44,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+POL,Poland,Europe & Central Asia,High income,1990,2025,36,35,36,36,35,0.93,False,excluded_primary_incomplete_core_coverage: gdp_growth,1
+PRI,Puerto Rico (US),Latin America & Caribbean ,High income,1990,2025,36,36,0,0,0,66.67,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,1990,2025,36,0,0,0,0,100.0,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+PRT,Portugal,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+PRY,Paraguay,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+PSE,West Bank and Gaza,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,1990,2025,36,31,29,20,20,25.93,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+PYF,French Polynesia,East Asia & Pacific,High income,1990,2025,36,35,0,0,0,67.59,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+QAT,Qatar,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,36,35,36,35,0.93,False,excluded_primary_incomplete_core_coverage: inflation,0
+ROU,Romania,Europe & Central Asia,High income,1990,2025,36,35,35,36,35,1.85,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation",1
+RUS,Russian Federation,Europe & Central Asia,High income,1990,2025,36,36,33,32,32,6.48,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",2
+RWA,Rwanda,Sub-Saharan Africa ,Low income,1990,2025,36,36,34,36,34,1.85,False,excluded_primary_incomplete_core_coverage: inflation,0
+SAU,Saudi Arabia,"Middle East, North Africa, Afghanistan & Pakistan",High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+SDN,Sudan,Sub-Saharan Africa ,Low income,1990,2025,36,36,33,28,28,10.19,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+SEN,Senegal,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+SGP,Singapore,East Asia & Pacific,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+SLB,Solomon Islands,East Asia & Pacific,Lower middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+SLE,Sierra Leone,Sub-Saharan Africa ,Low income,1990,2025,36,36,19,35,19,16.67,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+SLV,El Salvador,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,1
+SMR,San Marino,Europe & Central Asia,High income,1990,2025,36,26,22,33,22,25.0,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+SOM,"Somalia, Fed. Rep.",Sub-Saharan Africa ,Low income,1990,2025,36,36,0,0,0,66.67,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+SRB,Serbia,Europe & Central Asia,Upper middle income,1990,2025,36,30,31,20,20,25.0,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+SSD,South Sudan,Sub-Saharan Africa ,Low income,1990,2025,36,7,16,13,7,66.67,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+STP,Sao Tome and Principe,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,29,30,29,12.04,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",2
+SUR,Suriname,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,34,36,34,1.85,False,excluded_primary_incomplete_core_coverage: inflation,0
+SVK,Slovak Republic,Europe & Central Asia,High income,1990,2025,36,35,34,33,33,5.56,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+SVN,Slovenia,Europe & Central Asia,High income,1990,2025,36,35,36,35,35,1.85,False,"excluded_primary_incomplete_core_coverage: gdp_growth,reserves_usd",2
+SWE,Sweden,Europe & Central Asia,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+SWZ,Eswatini,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,30,35,30,6.48,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+SXM,Sint Maarten (Dutch part),Latin America & Caribbean ,High income,1990,2025,36,16,12,0,0,74.07,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+SYC,Seychelles,Sub-Saharan Africa ,High income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+SYR,Syrian Arab Republic,"Middle East, North Africa, Afghanistan & Pakistan",Low income,1990,2025,36,33,30,21,21,22.22,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+TCA,Turks and Caicos Islands,Latin America & Caribbean ,High income,1990,2025,36,17,0,0,0,84.26,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+TCD,Chad,Sub-Saharan Africa ,Low income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,3
+TGO,Togo,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,0,0,33.33,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+THA,Thailand,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+TJK,Tajikistan,Europe & Central Asia,Lower middle income,1990,2025,36,36,16,29,16,25.0,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+TKM,Turkmenistan,Europe & Central Asia,Upper middle income,1990,2025,36,36,0,7,0,60.19,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+TLS,Timor-Leste,East Asia & Pacific,Lower middle income,1990,2025,36,35,23,24,23,24.07,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+TON,Tonga,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+TTO,Trinidad and Tobago,Latin America & Caribbean ,High income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+TUN,Tunisia,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+TUR,Turkiye,Europe & Central Asia,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+TUV,Tuvalu,East Asia & Pacific,Upper middle income,1990,2025,36,36,1,0,0,65.74,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+TZA,Tanzania,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,29,29,6.48,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+UGA,Uganda,Sub-Saharan Africa ,Low income,1990,2025,36,36,32,35,32,4.63,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+UKR,Ukraine,Europe & Central Asia,Upper middle income,1990,2025,36,36,33,34,33,4.63,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",3
+URY,Uruguay,Latin America & Caribbean ,High income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,2
+USA,United States,North America,High income,1990,2025,36,36,35,36,35,0.93,False,excluded_primary_incomplete_core_coverage: inflation,2
+UZB,Uzbekistan,Europe & Central Asia,Lower middle income,1990,2025,36,36,15,13,13,40.74,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",0
+VCT,St. Vincent and the Grenadines,Latin America & Caribbean ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+VEN,"Venezuela, RB",Latin America & Caribbean ,Lower middle income,1990,2025,36,36,8,28,8,33.33,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+VGB,British Virgin Islands,Latin America & Caribbean ,High income,1990,2025,36,0,0,0,0,100.0,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+VIR,Virgin Islands (U.S.),Latin America & Caribbean ,High income,1990,2025,36,20,0,0,0,81.48,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+VNM,Viet Nam,East Asia & Pacific,Upper middle income,1990,2025,36,36,30,31,30,10.19,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1
+VUT,Vanuatu,East Asia & Pacific,Lower middle income,1990,2025,36,36,36,35,35,0.93,False,excluded_primary_incomplete_core_coverage: reserves_usd,0
+WSM,Samoa,East Asia & Pacific,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+XKX,Kosovo,Europe & Central Asia,Upper middle income,1990,2025,36,17,23,26,17,38.89,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",0
+YEM,"Yemen, Rep.","Middle East, North Africa, Afghanistan & Pakistan",Low income,1990,2025,36,28,24,33,24,21.3,False,"excluded_primary_incomplete_core_coverage: gdp_growth,inflation,reserves_usd",1
+ZAF,South Africa,Sub-Saharan Africa ,Upper middle income,1990,2025,36,36,36,36,36,0.0,True,included_primary_complete_core_1990_2025,0
+ZMB,Zambia,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,36,34,34,1.85,False,excluded_primary_incomplete_core_coverage: reserves_usd,1
+ZWE,Zimbabwe,Sub-Saharan Africa ,Lower middle income,1990,2025,36,36,13,35,13,22.22,False,"excluded_primary_incomplete_core_coverage: inflation,reserves_usd",1

@@ -1,10 +1,10 @@
 source_country_name,world_bank_country_code,mapping_rationale
 Cape Verde,CPV,World Bank current display name is Cabo Verde.
 Czech Republic,CZE,World Bank current display name is Czechia.
-Democratic Republic of Congo,COD,World Bank display name is Congo, Dem. Rep.
-Egypt,EGY,World Bank display name is Egypt, Arab Rep.
-Korea,KOR,World Bank display name is Korea, Rep.
-Republic of Congo,COG,World Bank display name is Congo, Rep.
+Democratic Republic of Congo,COD,"World Bank display name is Congo, Dem. Rep."
+Egypt,EGY,"World Bank display name is Egypt, Arab Rep."
+Korea,KOR,"World Bank display name is Korea, Rep."
+Republic of Congo,COG,"World Bank display name is Congo, Rep."
 Russia,RUS,World Bank display name is Russian Federation.
-Venezuela,VEN,World Bank display name is Venezuela, RB.
-Yemen,YEM,World Bank display name is Yemen, Rep.
+Venezuela,VEN,"World Bank display name is Venezuela, RB."
+Yemen,YEM,"World Bank display name is Yemen, Rep."

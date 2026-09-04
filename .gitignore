@@ -16,6 +16,9 @@ data/metadata/*
 !data/metadata/.gitkeep
 results/*
 !results/.gitkeep
+!results/tables/
+results/tables/*
+!results/tables/expanded_*.csv
 *.ipynb_checkpoints
 
 .DS_Store
