@@ -241,6 +241,11 @@ def main() -> None:
         aliases=["crisis-mechanisms", "mechanism-analysis"],
         help="Execute Phase 6 Crisis Mechanism and Temporal Concentration Analysis",
     )
+    subparsers.add_parser(
+        "final-synthesis",
+        aliases=["run-final-synthesis", "run-phase-7"],
+        help="Execute Phase 7 Final Model Selection and Research Synthesis",
+    )
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     root = args.root.resolve()
@@ -341,6 +346,16 @@ def main() -> None:
             summary["total_crisis_events"],
             summary["crisis_2007_count"],
             summary["crisis_non_2007_count"],
+        )
+    elif args.command in ("final-synthesis", "run-final-synthesis", "run-phase-7"):
+        from crisis_ews.evaluation.final_synthesis import run_phase_7_final_synthesis
+
+        summary = run_phase_7_final_synthesis(root)
+        LOGGER.info(
+            "Phase 7 Final Synthesis completed: %s models compared, %s robustness dimensions, %s coefficients",
+            summary["models_compared"],
+            summary["robustness_dimensions_summarized"],
+            summary["coefficients_documented"],
         )
 
 

@@ -22,10 +22,13 @@ results/tables/*
 !results/tables/phase5d_*.csv
 !results/tables/phase5e_*.csv
 !results/tables/phase6_*.csv
+!results/tables/final_*.csv
 !results/figures/
 results/figures/*
 !results/figures/phase6_*.png
 !results/figures/phase6_*.svg
+!results/figures/phase7_*.png
+!results/figures/phase7_*.svg
 *.ipynb_checkpoints
 
 .DS_Store

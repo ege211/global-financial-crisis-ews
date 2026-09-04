@@ -160,3 +160,22 @@ Future entries should record data-source versions, exclusion decisions, revised 
 - Approved conclusion recorded verbatim: "The observed predictive advantage of the extended specification is concentrated in the 2007 pre-GFC evaluation fold and appears to reflect a particular macro-financial configuration rather than a broadly generalizable crisis signal."
 - Code and tests verified: `.venv/bin/pytest -v` (74/74 passed), `.venv/bin/ruff check .` (clean). Baseline Phase 5 artifacts remain untouched. No commits, no push.
 
+## 2026-09-05 — Phase 7 final model selection & research synthesis
+
+- Executed the comprehensive final synthesis and multi-criteria model selection across all evaluated architectures (Baseline Logistic Regression, Baseline Random Forest, Extended Logistic Regression, Extended Random Forest).
+- Final Model Selection Determination:
+  - Extended Logistic Regression (6 variables) is retained as the Primary Research Specification with explicit regime qualifications.
+  - While achieving the highest pooled discrimination (PR-AUC = 0.0344, ROC-AUC = 0.5734, Recall = 47.37%, Precision = 4.59%), this selection explicitly acknowledges that its predictive advantage is concentrated in the 2007 pre-GFC evaluation fold (60.0% Recall) and did not generalize to the four observed non-2007 crisis episodes (Recall = 0.0%, ROC-AUC = 0.2301).
+  - Random Forest models compressed predicted probabilities toward the rare-event base rate, yielding low Brier scores (0.1347-0.1524) but missing 15 to 17 of 19 crisis events at standard decision cutoffs.
+- Generated Synthesis Tables & Visualizations:
+  - `results/tables/final_model_comparison.csv`: Multi-criteria comparison of all 4 architectures across pooled, 2007, and non-2007 subsets.
+  - `results/tables/final_robustness_summary.csv`: Synthesis of 6 evaluated robustness dimensions (winsorization, class weighting, threshold sensitivity, fold stability, predictor expansion, regime generalization).
+  - `results/tables/final_model_coefficients.csv`: Final parameter estimates, odds ratios, and non-causal associative interpretations for the Primary Research Specification.
+  - `results/figures/phase7_performance_synthesis.svg` and `.png`: Publication-quality multi-panel visualization of out-of-sample Recall, Precision-Recall dynamics, and temporal concentration.
+- Documentation & Reproducibility:
+  - Authored `docs/FINAL_RESEARCH_SYNTHESIS.md` structured across all 22 required sections.
+  - Integrated CLI command `run-final-synthesis` (aliases `final-synthesis`, `run-phase-7`).
+  - Added unit test suite `tests/test_phase7_final_synthesis.py` (6 unit tests).
+  - Verified test suite: all 80 tests pass; ruff clean. All Phase 5 and Phase 6 artifacts preserved byte-identical.
+
+
