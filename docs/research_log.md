@@ -120,10 +120,43 @@ Future entries should record data-source versions, exclusion decisions, revised 
   3. Pre-GFC historical period 2000–2006 (532 obs, 3 crises)
   4. 2007 GFC test fold (76 obs, 15 crises)
   5. 2008 post-GFC test fold (76 obs, 1 crisis)
-- Empirical findings & substantive verdict: Categorized unequivocally as a **GFC-specific signal**.
-  - Excluding 2007, Extended Logistic Regression catches exactly 0 out of 4 crises (Recall = 0.0%, TP = 0, FP = 167, FN = 4), while ROC-AUC collapses to 0.2301 (severe ranking inversion).
+- Empirical findings & substantive diagnostic: The observed predictive advantage of the extended specification is concentrated in the 2007 pre-GFC evaluation fold and appears to reflect a particular macro-financial configuration rather than a broadly generalizable crisis signal.
+  - Excluding 2007, Extended Logistic Regression catches 0 out of 4 crises (Recall = 0.0%, TP = 0, FP = 167, FN = 4), with an out-of-sample ROC-AUC of 0.2301 reflecting an observed ranking inversion in the out-of-sample predictions.
   - In the pre-GFC period (2000–2006), Extended LR catches 0 out of 3 crises (Turkey 2001, Argentina 2002, Nigeria 2006), with PR-AUC at 0.0051 (below unconditional prior 0.0056) and ROC-AUC at 0.2936.
   - In the 2007 GFC fold (forecasting 2008), Extended LR catches 9 of 15 crises (Recall = 60.0%, Precision = 31.0%, PR-AUC = 0.2647, ROC-AUC = 0.6470).
-  - Outside of the 2007 European credit-boom episode, macro-financial indicators offer zero detection capability for sovereign/currency-driven emerging-market crises.
+  - Within the four observed non-2007 evaluation events, all four events were missed at the fixed 0.50 threshold, exhibiting lower private credit depth and different macro-financial predictor configurations.
 - Software quality & testing: Implemented `src/crisis_ews/evaluation/temporal_generalization.py`, added `temporal-generalization` CLI command, generated `results/tables/phase5e_temporal_generalization.csv`, documented findings in `docs/PHASE_5E_TEMPORAL_GENERALIZATION.md`, and added 5 unit tests in `tests/test_phase5e_temporal_generalization.py`. All 68 repository tests pass; ruff clean.
 - Research integrity confirmed: Transparent reporting of model boundary conditions; no overclaiming of general early warning predictive power.
+
+## 2026-09-04 — Phase 6 crisis mechanism and temporal concentration analysis
+
+- Executed a descriptive crisis-mechanism and temporal-concentration analysis on the 19 out-of-sample crisis events from the Phase 5D 6-variable Extended Logistic Regression.
+- Research integrity protocol maintained: ZERO model retraining, ZERO threshold adjustments, ZERO predictor additions, ZERO causal claims. Strict observational analysis.
+- Key findings across the 19 evaluation crisis events:
+  - 15 events occurred in the 2007 pre-GFC fold (forecasting 2008 crises); 4 events occurred outside 2007 (Uruguay 2001, Dominican Republic 2002, United Kingdom 2006, Nigeria 2008).
+  - All 9 detected events occurred in the 2007 fold. In that fold, detected economies exhibited extreme private credit expansion (median 142.2% of GDP) and severe current account deficits (median -7.29% of GDP): DNK, ESP, FRA, GRC, HUN, IRL, ISL, ITA, PRT.
+  - All 6 missed economies in 2007 (AUT, BEL, CHE, DEU, NLD, SWE) ran current account surpluses (+1.50% to +8.63% of GDP, median +6.19%), with predicted probabilities remaining below 0.50 (range 0.4445 to 0.4795).
+  - Within the four observed non-2007 evaluation events, all four events were missed at the fixed 0.50 threshold (Recall = 0.0%), exhibiting lower median private credit (53.9% of GDP), higher inflation (median 4.79%), and weaker reserve dynamics (median YoY growth +5.59%).
+  - Statistical driver of ranking inversion: Within the four observed non-2007 evaluation events, actual crisis events received a median predicted probability of 0.4411 (mean = 0.4109), lower than the non-crisis panel median (0.4733), resulting in an observed ranking inversion in the out-of-sample predictions (ROC-AUC = 0.2301).
+- Visualizations generated:
+  - `results/figures/phase6_predictor_profile_comparison.svg` and `.png`: Private credit and current account distributions across groups.
+  - `results/figures/phase6_probability_distribution.svg` and `.png`: Out-of-sample predicted probability distributions relative to threshold 0.50.
+  - `results/figures/phase6_standardized_profiles.svg` and `.png`: Six-variable standardized z-scores relative to full panel.
+- Software quality & testing: Implemented `src/crisis_ews/evaluation/crisis_mechanisms.py`, added `run-phase-6` CLI command, exported 5 audit tables in `results/tables/phase6_*.csv`, documented findings in `docs/PHASE_6_CRISIS_MECHANISM_ANALYSIS.md`, and added 6 unit tests in `tests/test_phase6_crisis_mechanisms.py`.
+- Verified test suite and linting: All tests pass; ruff clean. All Phase 5 artifacts remain intact.
+
+## 2026-09-05 — Phase 6 methodological audit & correction pass
+
+- Conducted a comprehensive research integrity and methodological audit of Phase 6 to resolve internal taxonomy inconsistencies and purge external causal narratives.
+- Enforced strict three-layer architecture:
+  1. Authoritative Crisis Classification: Multilateral ground truth is strictly IMF WP/26/94 (Laeven & Valencia, 2026). All 19 evaluation events are confirmed as non-borderline `systemic_banking` crisis onsets. Because the IMF source provides no sub-mechanism taxonomy, empirical sub-mechanism is strictly classified as "Unknown / insufficient evidence" across all 19 events.
+  2. Data-Driven Descriptive Typology: Grouped strictly on observed predictor values at prediction year $t$:
+     - Descriptive Profile A: High private-credit / external-deficit configuration ($N=9$, all detected in 2007 fold: DNK, ESP, FRA, GRC, HUN, IRL, ISL, ITA, PRT).
+     - Descriptive Profile B: High current-account-surplus configuration ($N=6$, all missed in 2007 fold: AUT, BEL, CHE, DEU, NLD, SWE).
+     - Descriptive Profile C: Lower private-credit / higher-inflation / weaker-reserve-dynamics configuration ($N=4$, non-2007 folds: URY, DOM, GBR, NGA).
+  3. Economic Hypotheses and Interpretations: Strictly non-causal explanatory hypotheses linking estimated parameters ($\beta_{\text{credit}} = +0.5142, \beta_{\text{ca}} = -0.0463$) to observed predictor differences. Explains ranking behavior without asserting counterfactual proof or causal crisis etiology.
+- Sanitized `CRISIS_METADATA` and `phase6_mechanism_categorization.csv` / `phase6_crisis_event_profiles.csv`: purged informal historical narratives (e.g., Baninter fraud, Northern Rock liquidity run, oil price slump, subprime conduits) that lacked authoritative dataset backing in the repository.
+- Audited model claims: toned down strong statements (avoided "effective detector", "zero predictive capability", "missed due to X"); framed non-2007 ROC-AUC (0.2301) strictly as "an observed ranking inversion in the out-of-sample predictions"; explicitly qualified all non-2007 conclusions with "Within the four observed non-2007 evaluation events..." ($N=4$).
+- Approved conclusion recorded verbatim: "The observed predictive advantage of the extended specification is concentrated in the 2007 pre-GFC evaluation fold and appears to reflect a particular macro-financial configuration rather than a broadly generalizable crisis signal."
+- Code and tests verified: `.venv/bin/pytest -v` (74/74 passed), `.venv/bin/ruff check .` (clean). Baseline Phase 5 artifacts remain untouched. No commits, no push.
+

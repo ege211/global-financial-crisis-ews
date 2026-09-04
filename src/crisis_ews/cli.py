@@ -236,6 +236,11 @@ def main() -> None:
         help="Execute Phase 5E temporal generalization and GFC dependence analysis",
     )
     generalization_parser.add_argument("--threshold", type=float, default=0.50, help="Classification decision threshold")
+    subparsers.add_parser(
+        "run-phase-6",
+        aliases=["crisis-mechanisms", "mechanism-analysis"],
+        help="Execute Phase 6 Crisis Mechanism and Temporal Concentration Analysis",
+    )
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     root = args.root.resolve()
@@ -326,6 +331,16 @@ def main() -> None:
         LOGGER.info(
             "Phase 5E Temporal Generalization analysis completed across %s evaluation subsets",
             len(df["subset_key"].unique()),
+        )
+    elif args.command in ("run-phase-6", "crisis-mechanisms", "mechanism-analysis"):
+        from crisis_ews.evaluation.crisis_mechanisms import run_phase_6_crisis_mechanisms
+
+        summary = run_phase_6_crisis_mechanisms(root)
+        LOGGER.info(
+            "Phase 6 Crisis Mechanism Analysis completed: %s crisis episodes evaluated (%s in 2007, %s outside 2007)",
+            summary["total_crisis_events"],
+            summary["crisis_2007_count"],
+            summary["crisis_non_2007_count"],
         )
 
 

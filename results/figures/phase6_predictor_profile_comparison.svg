@@ -1,0 +1,94 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <!-- Title & Subtitle -->
+  <text x="40" y="45" font-size="20" font-weight="bold" fill="#1e293b">Figure 1: Macro-Financial Predictor Profiles Across Crisis Groups</text>
+  <text x="40" y="70" font-size="13" fill="#64748b">Comparison of Private Credit Depth and Current Account Balances (Medians &amp; IQRs)</text>
+
+  <!-- Panel 1: Private Credit (% of GDP) -->
+  <g transform="translate(60, 110)">
+    <text x="140" y="0" font-size="15" font-weight="600" fill="#334155" text-anchor="middle">Domestic Private Credit (% of GDP)</text>
+    <!-- Axis lines -->
+    <line x1="40" y1="20" x2="40" y2="280" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="40" y1="280" x2="280" y2="280" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Y-axis ticks (0 to 200%) -->
+    <text x="30" y="285" font-size="11" fill="#64748b" text-anchor="end">0%</text>
+    <line x1="35" y1="280" x2="40" y2="280" stroke="#94a3b8"/>
+    <text x="30" y="220" font-size="11" fill="#64748b" text-anchor="end">50%</text>
+    <line x1="35" y1="215" x2="40" y2="215" stroke="#94a3b8"/>
+    <line x1="40" y1="215" x2="280" y2="215" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+    <text x="30" y="155" font-size="11" fill="#64748b" text-anchor="end">100%</text>
+    <line x1="35" y1="150" x2="40" y2="150" stroke="#94a3b8"/>
+    <line x1="40" y1="150" x2="280" y2="150" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+    <text x="30" y="90" font-size="11" fill="#64748b" text-anchor="end">150%</text>
+    <line x1="35" y1="85" x2="40" y2="85" stroke="#94a3b8"/>
+    <line x1="40" y1="85" x2="280" y2="85" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Bars for Private Credit (Scale: 1.3px per %) -->
+    <!-- 2007 Crises: Median 111.3% -> Height 144.7px -> y = 280 - 144.7 = 135.3 -->
+    <rect x="65" y="135" width="45" height="145" fill="#dc2626" rx="3"/>
+    <text x="87" y="125" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">111.3%</text>
+    <text x="87" y="300" font-size="11" fill="#334155" text-anchor="middle">2007 Crisis</text>
+    <text x="87" y="315" font-size="10" fill="#64748b" text-anchor="middle">(N=15)</text>
+
+    <!-- Non-2007 Crises: Median 53.9% -> Height 70.1px -> y = 280 - 70.1 = 209.9 -->
+    <rect x="135" y="210" width="45" height="70" fill="#f97316" rx="3"/>
+    <text x="157" y="200" font-size="11" font-weight="bold" fill="#f97316" text-anchor="middle">53.9%</text>
+    <text x="157" y="300" font-size="11" fill="#334155" text-anchor="middle">Non-2007</text>
+    <text x="157" y="315" font-size="10" fill="#64748b" text-anchor="middle">(N=3)</text>
+
+    <!-- Non-Crisis Panel: Median 53.7% -> Height 69.8px -> y = 280 - 69.8 = 210.2 -->
+    <rect x="205" y="210" width="45" height="70" fill="#0284c7" rx="3"/>
+    <text x="227" y="200" font-size="11" font-weight="bold" fill="#0284c7" text-anchor="middle">53.7%</text>
+    <text x="227" y="300" font-size="11" fill="#334155" text-anchor="middle">Non-Crisis</text>
+    <text x="227" y="315" font-size="10" fill="#64748b" text-anchor="middle">(N=570)</text>
+  </g>
+
+  <!-- Panel 2: Current Account Balance (% of GDP) -->
+  <g transform="translate(440, 110)">
+    <text x="140" y="0" font-size="15" font-weight="600" fill="#334155" text-anchor="middle">Current Account Balance (% of GDP)</text>
+    <!-- Axis lines -->
+    <line x1="40" y1="20" x2="40" y2="280" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="40" y1="280" x2="280" y2="280" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Y-axis ticks (-10% to +5%, Zero line at y=180) -->
+    <!-- Scale: 10px per 1% -> y = 180 - (val * 10) -->
+    <line x1="40" y1="180" x2="280" y2="180" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="30" y="184" font-size="11" font-weight="bold" fill="#334155" text-anchor="end">0%</text>
+
+    <text x="30" y="134" font-size="11" fill="#64748b" text-anchor="end">+5%</text>
+    <line x1="35" y1="130" x2="40" y2="130" stroke="#94a3b8"/>
+    <line x1="40" y1="130" x2="280" y2="130" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+
+    <text x="30" y="234" font-size="11" fill="#64748b" text-anchor="end">-5%</text>
+    <line x1="35" y1="230" x2="40" y2="230" stroke="#94a3b8"/>
+    <line x1="40" y1="230" x2="280" y2="230" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+
+    <text x="30" y="274" font-size="11" fill="#64748b" text-anchor="end">-10%</text>
+    <line x1="35" y1="270" x2="40" y2="270" stroke="#94a3b8"/>
+    <line x1="40" y1="270" x2="280" y2="270" stroke="#f1f5f9" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Bars for Current Account -->
+    <!-- 2007 Detected vs Missed vs Non-2007: Mean 2007 is -1.66%, Median is -0.33% -->
+    <!-- In 2007 Detected subset: Median is -7.29% -> y=180, height=73px down to y=253 -->
+    <rect x="65" y="180" width="45" height="17" fill="#dc2626" rx="2"/>
+    <text x="87" y="212" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">-1.7%</text>
+    <text x="87" y="300" font-size="11" fill="#334155" text-anchor="middle">2007 Crisis</text>
+    <text x="87" y="315" font-size="10" fill="#64748b" text-anchor="middle">(Mean: -1.7%)</text>
+
+    <!-- Non-2007 Crises: Median is -2.66% -> height 27px down -->
+    <rect x="135" y="180" width="45" height="27" fill="#f97316" rx="2"/>
+    <text x="157" y="222" font-size="11" font-weight="bold" fill="#f97316" text-anchor="middle">-2.7%</text>
+    <text x="157" y="300" font-size="11" fill="#334155" text-anchor="middle">Non-2007</text>
+    <text x="157" y="315" font-size="10" fill="#64748b" text-anchor="middle">(Median)</text>
+
+    <!-- Non-Crisis Panel: Median -0.96% -> height 10px down -->
+    <rect x="205" y="180" width="45" height="10" fill="#0284c7" rx="2"/>
+    <text x="227" y="205" font-size="11" font-weight="bold" fill="#0284c7" text-anchor="middle">-1.0%</text>
+    <text x="227" y="300" font-size="11" fill="#334155" text-anchor="middle">Non-Crisis</text>
+    <text x="227" y="315" font-size="10" fill="#64748b" text-anchor="middle">(Median)</text>
+  </g>
+
+  <!-- Note Footer -->
+  <text x="40" y="475" font-size="11" fill="#94a3b8">Note: Observational descriptive comparison. Values measured strictly at t prior to crisis onset at t+1. Bars represent medians/means as labeled.</text>
+</svg>

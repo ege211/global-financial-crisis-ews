@@ -1,0 +1,91 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="800" height="500" fill="#ffffff"/>
+  <!-- Title & Subtitle -->
+  <text x="40" y="45" font-size="20" font-weight="bold" fill="#1e293b">Figure 2: Out-of-Sample Predicted Probability Distributions Across Groups</text>
+  <text x="40" y="70" font-size="13" fill="#64748b">Extended Logistic Regression Out-of-Sample Probabilities Relative to the Default Threshold (&tau; = 0.50)</text>
+
+  <g transform="translate(60, 110)">
+    <!-- Y-axis (Probability: 0.0 to 1.0, 300px scale -> 300px per 1.0) -->
+    <line x1="80" y1="20" x2="80" y2="320" stroke="#cbd5e1" stroke-width="1.5"/>
+    <line x1="80" y1="320" x2="680" y2="320" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Y-axis labels -->
+    <text x="70" y="324" font-size="11" fill="#64748b" text-anchor="end">0.00</text>
+    <line x1="75" y1="320" x2="80" y2="320" stroke="#94a3b8"/>
+
+    <text x="70" y="249" font-size="11" fill="#64748b" text-anchor="end">0.25</text>
+    <line x1="75" y1="245" x2="80" y2="245" stroke="#94a3b8"/>
+    <line x1="80" y1="245" x2="680" y2="245" stroke="#f1f5f9" stroke-dasharray="4"/>
+
+    <!-- Threshold line at 0.50 (y = 320 - 150 = 170) -->
+    <line x1="80" y1="170" x2="680" y2="170" stroke="#ef4444" stroke-width="2" stroke-dasharray="6"/>
+    <text x="690" y="174" font-size="11" font-weight="bold" fill="#ef4444">Threshold &tau; = 0.50</text>
+    <text x="70" y="174" font-size="11" font-weight="bold" fill="#ef4444" text-anchor="end">0.50</text>
+
+    <text x="70" y="99" font-size="11" fill="#64748b" text-anchor="end">0.75</text>
+    <line x1="75" y1="95" x2="80" y2="95" stroke="#94a3b8"/>
+    <line x1="80" y1="95" x2="680" y2="95" stroke="#f1f5f9" stroke-dasharray="4"/>
+
+    <text x="70" y="24" font-size="11" fill="#64748b" text-anchor="end">1.00</text>
+    <line x1="75" y1="20" x2="80" y2="20" stroke="#94a3b8"/>
+
+    <!-- Group 1: 2007 Crisis Events (N=15) -->
+    <!-- Median = 0.5078 -> y = 320 - (0.5078 * 300) = 167.7 -->
+    <!-- Min = 0.4445 -> y = 186.7; Max = 0.5701 -> y = 149.0 -->
+    <g transform="translate(180, 0)">
+      <!-- Range line -->
+      <line x1="0" y1="149" x2="0" y2="187" stroke="#dc2626" stroke-width="2"/>
+      <line x1="-15" y1="149" x2="15" y2="149" stroke="#dc2626" stroke-width="2"/>
+      <line x1="-15" y1="187" x2="15" y2="187" stroke="#dc2626" stroke-width="2"/>
+      <!-- Box (IQR) -->
+      <rect x="-30" y="152" width="60" height="30" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="3"/>
+      <!-- Median line -->
+      <line x1="-30" y1="168" x2="30" y2="168" stroke="#991b1b" stroke-width="3"/>
+      <!-- Labels -->
+      <text x="0" y="135" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">Median: 0.5078</text>
+      <text x="0" y="340" font-size="13" font-weight="600" fill="#1e293b" text-anchor="middle">2007 Crisis</text>
+      <text x="0" y="355" font-size="11" fill="#64748b" text-anchor="middle">N = 15</text>
+      <text x="0" y="372" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">60.0% &ge; 0.50</text>
+    </g>
+
+    <!-- Group 2: Non-2007 Crisis Events (N=4) -->
+    <!-- Median = 0.4411 -> y = 320 - (0.4411 * 300) = 187.7 -->
+    <!-- Min = 0.2978 -> y = 230.7; Max = 0.4635 -> y = 181.0 -->
+    <g transform="translate(380, 0)">
+      <!-- Range line -->
+      <line x1="0" y1="181" x2="0" y2="231" stroke="#f97316" stroke-width="2"/>
+      <line x1="-15" y1="181" x2="15" y2="181" stroke="#f97316" stroke-width="2"/>
+      <line x1="-15" y1="231" x2="15" y2="231" stroke="#f97316" stroke-width="2"/>
+      <!-- Box (IQR) -->
+      <rect x="-30" y="185" width="60" height="35" fill="#ffedd5" stroke="#f97316" stroke-width="2" rx="3"/>
+      <!-- Median line -->
+      <line x1="-30" y1="188" x2="30" y2="188" stroke="#c2410c" stroke-width="3"/>
+      <!-- Labels -->
+      <text x="0" y="165" font-size="12" font-weight="bold" fill="#ea580c" text-anchor="middle">Median: 0.4411</text>
+      <text x="0" y="340" font-size="13" font-weight="600" fill="#1e293b" text-anchor="middle">Non-2007 Crisis</text>
+      <text x="0" y="355" font-size="11" fill="#64748b" text-anchor="middle">N = 4</text>
+      <text x="0" y="372" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">0.0% &ge; 0.50</text>
+    </g>
+
+    <!-- Group 3: Non-Crisis Panel (N=665) -->
+    <!-- Median = 0.4733 -> y = 320 - (0.4733 * 300) = 178.0 -->
+    <g transform="translate(580, 0)">
+      <!-- Range line (sample IQR) -->
+      <line x1="0" y1="100" x2="0" y2="280" stroke="#0284c7" stroke-width="2"/>
+      <line x1="-15" y1="100" x2="15" y2="100" stroke="#0284c7" stroke-width="2"/>
+      <line x1="-15" y1="280" x2="15" y2="280" stroke="#0284c7" stroke-width="2"/>
+      <!-- Box (IQR) -->
+      <rect x="-30" y="160" width="60" height="40" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" rx="3"/>
+      <!-- Median line -->
+      <line x1="-30" y1="178" x2="30" y2="178" stroke="#0369a1" stroke-width="3"/>
+      <!-- Labels -->
+      <text x="0" y="145" font-size="12" font-weight="bold" fill="#0284c7" text-anchor="middle">Median: 0.4733</text>
+      <text x="0" y="340" font-size="13" font-weight="600" fill="#1e293b" text-anchor="middle">Non-Crisis</text>
+      <text x="0" y="355" font-size="11" fill="#64748b" text-anchor="middle">N = 665</text>
+      <text x="0" y="372" font-size="11" fill="#64748b" text-anchor="middle">28.1% &ge; 0.50</text>
+    </g>
+  </g>
+
+  <!-- Note Footer -->
+  <text x="40" y="480" font-size="11" fill="#94a3b8">Note: Illustrates why Extended LR suffered an inverted ROC-AUC (0.2301) outside 2007: non-2007 crises received lower probabilities than the non-crisis median.</text>
+</svg>
