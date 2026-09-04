@@ -1,0 +1,13 @@
+# A contained engineering check, not an empirical research specification.
+run_namespace: pipeline_validation
+crisis_crosswalk: config/pipeline_validation_crisis_crosswalk.csv
+start_year: 1995
+end_year: 2017
+countries: [AUS, BRA, DEU, IDN, MEX, TUR, ZAF]
+# Private-credit coverage was audited separately and is excluded from this
+# engineering profile because it has structural gaps for DEU, IDN, and TUR.
+variables: [gdp_growth, inflation, reserves_usd]
+features: [gdp_growth, inflation, reserves_usd_yoy_pct_change]
+model_overrides:
+  minimum_train_years: 10
+  test_start_year: 2008

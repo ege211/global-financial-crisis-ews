@@ -1,0 +1,30 @@
+# Editable research sample. ISO-3 codes are used throughout the pipeline.
+countries:
+  - AUS
+  - BRA
+  - CAN
+  - CHL
+  - CHN
+  - COL
+  - DEU
+  - ESP
+  - FRA
+  - GBR
+  - IDN
+  - IND
+  - ITA
+  - JPN
+  - KOR
+  - MEX
+  - MYS
+  - NLD
+  - NOR
+  - PER
+  - PHL
+  - POL
+  - RUS
+  - SWE
+  - THA
+  - TUR
+  - USA
+  - ZAF

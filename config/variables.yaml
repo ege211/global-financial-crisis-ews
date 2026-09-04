@@ -1,0 +1,57 @@
+# World Bank World Development Indicators. Values are annual and downloaded as reported.
+# The data dictionary records transformations and availability caveats.
+variables:
+  gdp_growth:
+    indicator: NY.GDP.MKTP.KD.ZG
+    description: GDP growth (annual %)
+    units: percent
+    transform: level
+    min: -100
+    max: 100
+  inflation:
+    indicator: FP.CPI.TOTL.ZG
+    description: Inflation, consumer prices (annual %)
+    units: percent
+    transform: level
+    min: -100
+    max: 10000
+  domestic_credit_pct_gdp:
+    indicator: FS.AST.DOMS.GD.ZS
+    description: Domestic credit provided by financial sector (% of GDP)
+    units: percent of GDP
+    transform: level
+    min: 0
+    max: 1000
+  private_credit_pct_gdp:
+    indicator: FS.AST.PRVT.GD.ZS
+    description: Domestic credit to private sector (% of GDP)
+    units: percent of GDP
+    transform: level
+    min: 0
+    max: 1000
+  reserves_usd:
+    indicator: FI.RES.TOTL.CD
+    description: Total reserves (includes gold, current US$)
+    units: current USD
+    transform: yoy_pct_change
+    min: 0
+  current_account_pct_gdp:
+    indicator: BN.CAB.XOKA.GD.ZS
+    description: Current account balance (% of GDP)
+    units: percent of GDP
+    transform: level
+    min: -100
+    max: 100
+  real_interest_rate:
+    indicator: FR.INR.RINR
+    description: Real interest rate (%)
+    units: percent
+    transform: level
+    min: -100
+    max: 1000
+  official_exchange_rate:
+    indicator: PA.NUS.FCRF
+    description: Official exchange rate (LCU per US$, period average)
+    units: LCU per USD
+    transform: yoy_pct_change
+    min: 0

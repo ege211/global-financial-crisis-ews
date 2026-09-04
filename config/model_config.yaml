@@ -1,0 +1,26 @@
+seed: 2026
+prediction_horizon_years: 1
+crisis_type: systemic_banking
+minimum_train_years: 10
+test_start_year: 2005
+threshold: 0.50
+feature_sets:
+  core:
+    - gdp_growth
+    - inflation
+    - domestic_credit_pct_gdp
+    - private_credit_pct_gdp
+    - reserves_usd_yoy_pct_change
+    - current_account_pct_gdp
+    - real_interest_rate
+    - official_exchange_rate_yoy_pct_change
+models:
+  logistic_regression:
+    C: 1.0
+    class_weight: balanced
+    max_iter: 2000
+  random_forest:
+    n_estimators: 400
+    max_depth: 4
+    min_samples_leaf: 5
+    class_weight: balanced
