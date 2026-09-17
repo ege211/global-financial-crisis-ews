@@ -8,6 +8,25 @@
 
 ---
 
+## Author's Note: What Led Me to Build This and What the Data Actually Taught Me
+
+### 1. The Spark: Why I Didn't Trust Online Tutorials
+I got interested in this after reading about the 2008 crash. What confused me was simple: if this crisis shook the entire world economy, why did standard forecasting tools completely miss it? When I looked up tutorials and GitHub repos about "predicting financial crises with machine learning," almost all of them claimed 95% to 99% accuracy. That immediately felt off to me. Predicting a rare banking crisis isn't like classifying pictures of cats and dogs. When I inspected their code, I saw they were basically letting the model peek into the future—shuffling years randomly and training on 2009 data to "predict" 2007. I wanted to build an end-to-end framework from scratch to see what happens when the computer is strictly forbidden from cheating.
+
+### 2. The 97% Trap (Finding a Needle in a Haystack)
+The first shock came when I assembled the actual ground-truth data from the World Bank and the IMF. Across 76 countries evaluated over nine years (684 country-years), there were only 19 actual crisis onsets. That’s less than 3%. When I ran my very first basic model, my screen showed 97.2% accuracy. For about ten seconds, I thought I was a genius. Then I looked at the confusion matrix: the model was simply guessing "no crisis" for every single country, every single year. It got an "A" on paper while being 100% useless in the real world. That was my first big lesson: standard accuracy is a complete trap when you are looking for rare disasters. I had to throw it out and focus entirely on precision, recall, and the real cost of missing a crisis.
+
+### 3. The "No Time-Travel" Rule
+Stopping the computer from cheating across time was the hardest engineering challenge in the project. In regular school coding projects, you just shuffle the data and split it 80/20. But in economics, that’s time travel. You can’t use what happened in Spain in 2008 to guess what happened in 2004. I had to build an expanding-window pipeline where the model only learns from past years to forecast the single next year. Even basic steps like filling in missing numbers or scaling features had to be calculated strictly on past data before touching the test year. It took weeks of debugging and 80 automated unit tests to build that wall, but it ensured every single test prediction was honest.
+
+### 4. What the Data Actually Told Me (The 2007 Reality Check)
+When I added private debt and current account deficits into the model, the pooled numbers looked like a massive win at first. The detection rate jumped from 21% to 47.37%, catching 9 out of 19 crises. But when I audited the results year by year, I got a sobering reality check. Out of the 19 crises in the test period, 15 happened in one single year: right before the 2008 crash. In that specific wave (countries like Spain, Ireland, and Iceland that borrowed way too much), my model did well—catching 9 out of 15. But across all the other eight years combined, there were 4 other crises (like the UK or Uruguay), and my model caught exactly zero of them. Outside 2007, its performance was literally worse than flipping a coin (ROC-AUC = 0.2301).
+
+### 5. My Main Takeaway
+At first, seeing the model fail outside 2007 felt disappointing. But digging into the history showed me why: my model was specifically tracking domestic debt bubbles and trade deficits. It had no way of seeing bank runs like Northern Rock in the UK or money fleeing Uruguay. That taught me what data science in economics actually is. An early warning model is not an all-knowing crystal ball; it is more like a smoke detector calibrated to smell one specific type of fire. Admitting what my model couldn't do wasn't a failure—it was the most honest and valuable finding of the entire project.
+
+---
+
 ## Abstract
 
 Systemic banking crises generate profound and protracted macroeconomic contractions, yet designing reliable early warning systems (EWS) remains a formidable challenge due to severe class imbalance, structural shifts across historical epochs, and complex macro-financial interactions. This paper investigates whether macro-financial indicators can provide useful early warning signals for systemic banking crises within an objective, reproducible machine-learning framework. Using an annual panel of 76 economies spanning 1990–2025 constructed from World Bank World Development Indicators and the International Monetary Fund (IMF) Systemic Banking Crises Database (Laeven & Valencia, 2026, WP/26/94), we evaluate linear logistic regression models and non-linear random forest ensembles across a 4-variable macroeconomic flow baseline and a pre-registered 6-variable balance-sheet extended specification. Models are estimated using a strict, leak-free expanding-window temporal validation protocol across nine sequential test folds ($T = 2000, \dots, 2008$, $N = 684$ out-of-sample country-years, 19 forward crisis onsets) with train-only preprocessing and a fixed classification threshold ($\tau = 0.50$).
