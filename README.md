@@ -1,4 +1,9 @@
 # Global Financial Crisis Early Warning System
+### Independent High-School Student Quantitative Research Project
+
+**Author:** Ege Can  
+**School:** FMV Özel Ispartakule Işık High School, Istanbul (Class of 2027)  
+**Academic Level:** High School Student Research Project  
 
 > **Research Question:** Can macro-financial indicators provide useful early warning signals of systemic banking crises?
 
