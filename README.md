@@ -126,20 +126,19 @@ The central contribution of this research is not simply claiming that a model "p
 │   ├── raw/                 # Versioned WDI downloads and IMF WP/26/94 extracts
 │   ├── interim/             # Standardized panel extracts
 │   └── processed/           # Modeling panels with forward target labels
-├── docs/                    # Research documentation and academic paper
-│   ├── RESEARCH_PAPER.md        # 11,966-word comprehensive academic research paper
-│   ├── PROJECT_OVERVIEW.md      # Admissions & executive project walkthrough
-│   ├── RESEARCH_LESSONS.md      # Methodological lessons learned
-│   ├── INTERVIEW_PREPARATION.md # Technical Q&A across economics, stats, and ML
-│   ├── PROJECT_CV_ENTRY.md      # Application and resume project descriptions
-│   └── research_log.md          # Chronological 8-phase research audit trail
+├── paper/                   # Research documentation and academic paper
+│   ├── RESEARCH_PAPER.md        # Comprehensive academic research paper
+│   ├── crisis_definition.md     # Mathematical & systemic crisis taxonomy
+│   ├── data_dictionary.md       # Indicator definitions and transformations
+│   ├── data_sources.md          # Primary data sources & retrieval methodology
+│   └── methodology.md           # Econometric and machine learning methodology
 ├── results/
-│   ├── figures/             # Publication SVG and PNG performance visualizations
-│   └── tables/              # Versioned out-of-sample metrics and coefficient tables
+│   ├── figures/             # Performance visualizations
+│   └── tables/              # Out-of-sample metrics and coefficient tables
 ├── src/crisis_ews/          # Modular Python scientific package
 │   ├── data/                # WDI API client and panel builders
 │   ├── evaluation/          # Expanding-window validation, metrics, synthesis
-│   ├── features/            # Preprocessing and leak-free transformations
+│   ├── features/            # Preprocessing and transformations
 │   ├── labels/              # Forward target construction and IMF database parser
 │   └── models/              # Cost-sensitive logistic regression & random forests
 ├── tests/                   # 80 automated unit and integration tests (pytest)
@@ -162,7 +161,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -e '.[dev]'
 
-# 3. Execute full research synthesis pipeline (Phases 5–7)
+# 3. Execute full research synthesis pipeline
 python -m crisis_ews.cli run-final-synthesis
 
 # 4. Execute automated test suite (80 passed tests)
@@ -176,15 +175,14 @@ ruff check .
 
 ## Research Paper
 
-For the complete 11,966-word academic research paper detailing the econometric derivation, literature context, three-layer mechanism architecture, parameter estimates, and exhaustive appendices, see:
+For the complete academic research paper detailing the econometric derivation, literature context, three-layer mechanism architecture, parameter estimates, and empirical findings, see:
 
-📄 **[`docs/RESEARCH_PAPER.md`](docs/RESEARCH_PAPER.md)**
+📄 **[`paper/RESEARCH_PAPER.md`](paper/RESEARCH_PAPER.md)**
 
-Additional portfolio walkthroughs:
-- **[`docs/PROJECT_OVERVIEW.md`](docs/PROJECT_OVERVIEW.md):** 2-page research journey and intellectual motivation.
-- **[`docs/RESEARCH_LESSONS.md`](docs/RESEARCH_LESSONS.md):** Methodological takeaways on validation, class imbalance, and negative results.
-- **[`docs/INTERVIEW_PREPARATION.md`](docs/INTERVIEW_PREPARATION.md):** In-depth technical interview defense across economics, statistics, and machine learning.
-- **[`docs/PROJECT_CV_ENTRY.md`](docs/PROJECT_CV_ENTRY.md):** Concise CV and application descriptions.
+Methodology & Data Documentation:
+- **[`paper/methodology.md`](paper/methodology.md):** Econometric specifications, expanding-window evaluation, and metric definitions.
+- **[`paper/crisis_definition.md`](paper/crisis_definition.md):** Systemic crisis identification and forward-looking forecast horizon construction.
+- **[`paper/data_sources.md`](paper/data_sources.md):** World Development Indicators (WDI) and IMF macro-historical database provenance.
 
 ---
 
