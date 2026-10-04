@@ -204,3 +204,8 @@ Additional portfolio walkthroughs:
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+---
+
+## Research Methodology & Transparency Note
+As an independent 12th-grade student researcher, I designed the research question, collected macroeconomic indicators from the World Bank and IMF crisis chronologies, and implemented the early warning models in Python. I used AI coding assistants to assist with data pipeline construction, testing scripts, and drafting documentation. All final empirical interpretations and conclusions are my own.
+
