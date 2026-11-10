@@ -1,8 +1,8 @@
 # A Machine-Learning-Based Early Warning Framework for Systemic Banking Crises
 
-**Author:** Ege Can  
+**Author:** Ege Umut Can  
 **Academic Level:** Independent High-School Student Research Project  
-**School:** FMV Özel Ispartakule Işık High School, Istanbul (Class of 2027)  
+**School:** FMV Işık High School, Istanbul (Class of 2027)  
 **Date:** September 2026  
 **Repository:** `https://github.com/ege211/global-financial-crisis-ews`  
 **Evaluation Scope:** 76 World Bank Economies, 1990–2025 Panel, 684 Pooled Out-of-Sample Observations ($T \in [2000, 2008]$)  
