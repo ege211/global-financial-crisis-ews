@@ -13,6 +13,12 @@ The project trains only on earlier years and tests on the following year (an exp
 
 ---
 
+![Crisis onsets by year, crises flagged a year ahead, and false alarms](results/figures/crises_caught_by_year.png)
+
+**In short:** across 76 countries and 19 banking-crisis onsets (2001 to 2009), adding two more variables raised the crises flagged a year ahead from 4 to 9, but all 9 were in the 2008 global crisis, the model gave 187 false alarms, and it caught none of the 4 crises outside 2008. Details below in Key Findings and Limitations.
+
+---
+
 ## Student Note: What Led Me to Build This and What the Data Actually Taught Me
 
 ### 1. The Spark: Why I Didn't Trust Online Tutorials
